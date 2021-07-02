@@ -6,11 +6,9 @@ int main() {
   std::cout << "Input string: " << std::endl;
   std::getline(std::cin, str);
   int count = 0;
-  for (int i = 0; i < str.length(); i++) {
-	if (str[i]!=' ') {
-	  while (str[i]!=' ' && i < str.length()) {
-		++i;
-	  }
+  for (int i = 0;i < str.length(); i++) {
+	if ((i < str.length() && i!=0 && str[i]!=' ' && str[i - 1]==' ')
+		|| (i < str.length() && i==0 && str[i]!=' ')) {
 	  count++;
 	}
   }
