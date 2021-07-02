@@ -8,7 +8,7 @@ int main() {
   int count = 0;
   for (int i = 0; i < str.length(); i++) {
 	if (str[i]!=' ') {
-	  while (str[i]!=' ' && i < str.length()) {
+	  while (i < str.length() && str[i]!=' ') {
 		++i;
 	  }
 	  count++;
